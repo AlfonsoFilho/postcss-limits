@@ -1,15 +1,15 @@
-import {LimitObjectType, PluginOptionsType} from './types';
+import {LimitCustomType, PluginOptionsType} from './types';
 
-const BUILDIN_PRESETS: {ie9: LimitObjectType, ie10: LimitObjectType} = {
+const BUILDIN_PRESETS: {ie9: LimitCustomType, ie10: LimitCustomType} = {
   ie9: {
-    RULES: 4095,
-    IMPORT: 31,
-    NESTING: 4
+    selectors: 4095,
+    import: 31,
+    nesting: 4
   },
   ie10: {
-    RULES: 65534,
-    IMPORT: 4095,
-    NESTING: 4095
+    selectors: 65534,
+    import: 4095,
+    nesting: 4095
   }
 };
 

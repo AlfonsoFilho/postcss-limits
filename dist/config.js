@@ -9,14 +9,14 @@ var _types = require('./types');
 
 var BUILDIN_PRESETS = {
   ie9: {
-    RULES: 4095,
-    IMPORT: 31,
-    NESTING: 4
+    selectors: 4095,
+    import: 31,
+    nesting: 4
   },
   ie10: {
-    RULES: 65534,
-    IMPORT: 4095,
-    NESTING: 4095
+    selectors: 65534,
+    import: 4095,
+    nesting: 4095
   }
 };
 

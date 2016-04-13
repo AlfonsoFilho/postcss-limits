@@ -12,10 +12,11 @@ export function didCssExceedsLimits(css: Object = {}, preset: PluginOptionsType 
       count += rule.selectors.length;
     }
   });
-
+  // 
   // console.log('didCssExceedsLimits:count', count);
-  // console.log('didCssExceedsLimits:exceeds', count >= PRESETS[String(preset).toLowerCase()].RULES);
-  return count >= PRESETS[String(preset).toLowerCase()].RULES;
+  // console.log('didCssExceedsLimits:count', count);
+  // console.log('didCssExceedsLimits:exceeds', count >= PRESETS[String(preset).toLowerCase()].selectors);
+  return count >= PRESETS[String(preset).toLowerCase()].selectors;
 }
 
 export function validateOptions(options: PluginOptionsType) {

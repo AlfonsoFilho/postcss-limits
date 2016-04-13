@@ -12,7 +12,7 @@ var _types = require('./types');
 
 function didCssExceedsLimits() {
   var css = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
-  var ieVersion = arguments.length <= 1 || arguments[1] === undefined ? 'ie9' : arguments[1];
+  var preset = arguments.length <= 1 || arguments[1] === undefined ? 'ie9' : arguments[1];
 
 
   var count = 0;
@@ -22,10 +22,11 @@ function didCssExceedsLimits() {
       count += rule.selectors.length;
     }
   });
-
+  //
   // console.log('didCssExceedsLimits:count', count);
-  // console.log('didCssExceedsLimits:exceeds', count >= PRESETS[String(ieVersion).toLowerCase()].RULES);
-  return count >= _config.PRESETS[String(ieVersion).toLowerCase()].RULES;
+  // console.log('didCssExceedsLimits:count', count);
+  // console.log('didCssExceedsLimits:exceeds', count >= PRESETS[String(preset).toLowerCase()].selectors);
+  return count >= _config.PRESETS[String(preset).toLowerCase()].selectors;
 }
 
 function validateOptions(options) {

@@ -1,12 +1,12 @@
-type LimitStringType = string;
+type LimitPresetType = string;
 
-export type LimitObjectType = {
-  RULES: number,
-  IMPORT: number,
-  NESTING: number
+export type LimitCustomType = {
+  selectors: number,
+  import: number,
+  nesting: number
 };
 
-type LimitsType = LimitStringType | LimitObjectType;
+type LimitsType = LimitPresetType | LimitCustomType;
 
 export type PluginOptionsType = {
   limits: LimitsType,
